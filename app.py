@@ -67,6 +67,12 @@ def create_app(config_name=None):
     app.register_blueprint(dashboard_bp)
     app.register_blueprint(clients_bp)
     app.register_blueprint(invoices_bp)
+
+    from flask import render_template
+
+@app.route('/')
+def home():
+    return render_template('index.html')
     
 
     # Create database tables and seed admin
