@@ -62,11 +62,12 @@ def create_app(config_name=None):
     from routes.invoices import invoices_bp
     from routes.main import main_bp
 
+    app.register_blueprint(main_bp)
     app.register_blueprint(auth_bp)
     app.register_blueprint(dashboard_bp)
     app.register_blueprint(clients_bp)
     app.register_blueprint(invoices_bp)
-    app.register_blueprint(main_bp)
+    
 
     # Create database tables and seed admin
     with app.app_context():
