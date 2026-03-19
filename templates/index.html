@@ -1,3 +1,24 @@
-<h1 style="text-align:center; margin-top:100px;">
-Landing Page Working ✅
-</h1>
+{% extends "base.html" %}
+
+{% block auth_content %}
+
+<div style="text-align:center; padding:100px;">
+  <h1>Invoicing that <span style="color:#2563eb;">runs itself</span></h1>
+  <p style="margin-top:20px; color:gray;">
+    Your modern invoice automation platform
+  </p>
+
+  <a href="/login" style="
+    display:inline-block;
+    margin-top:30px;
+    padding:12px 24px;
+    background:#2563eb;
+    color:white;
+    border-radius:8px;
+    text-decoration:none;
+  ">
+    Open Dashboard
+  </a>
+</div>
+
+{% endblock %}
